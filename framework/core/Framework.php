@@ -43,9 +43,10 @@ class Framework
         define("CONTROLLER_PATH", APP_PATH . "controllers" . DS);
 
         define("MODEL_PATH", APP_PATH . "models" . DS);
+        
+        define("STORAGE_PATH", APP_PATH . "storage" . DS);
 
         define("VIEW_PATH", APP_PATH . "views" . DS);
-
 
         define("CORE_PATH", FRAMEWORK_PATH . "core" . DS);
 
@@ -58,11 +59,11 @@ class Framework
         define("UPLOAD_PATH", PUBLIC_PATH . "uploads" . DS);
 
 
-        // Define platform, controller, action, for example:
+        // Define platform - controllerfolder, controller, action, for example:
 
         // index.php?p=admin&c=Goods&a=add
 
-        define("PLATFORM", isset($_REQUEST['p']) ? $_REQUEST['p'] : 'home');
+        define("PLATFORM", isset($_REQUEST['p']) ? $_REQUEST['p'] : '');
 
         define("CONTROLLER", isset($_REQUEST['c']) ? $_REQUEST['c'] : 'Index');
 
@@ -124,6 +125,10 @@ class Framework
         } elseif (substr($classname, -5) == "Model"){
             // Model
             require_once  MODEL_PATH . "$classname.php";
+        }
+        elseif(substr($classname, -7) == "Plugins"){
+            //Plugins
+            require_once  PLUGIN_PATH . "$classname.php";
         }
     }
 

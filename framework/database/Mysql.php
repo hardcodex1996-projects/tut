@@ -17,6 +17,7 @@ class Mysql
     protected $conn = false;  //DB connection resources
 
     protected $sql;           //sql statement
+    protected $mysqli;
 
 
     /**
@@ -39,10 +40,27 @@ class Mysql
 
         $charset = isset($config['charset']) ? $config['charset'] : 'utf8';
 
+        $mysqli = new mysqli($host, $user, $password, $dbname);
+              // Oh no! A connect_errno exists so the connection attempt failed!
+              if ($mysqli->connect_errno) {
+                // The connection failed. What do you want to do? 
+                // You could contact yourself (email?), log the error, show a nice page, etc.
+                // You do not want to reveal sensitive information
+    
+                // Let's try this:
+                echo "Sorry, this website is experiencing problems.";
+    
+                // Something you should not do on a public site, but this example will show you
+                // anyways, is print out MySQL error related information -- you might log this
+                echo "Error: Failed to make a MySQL connection, here is why: \n";
+                echo "Errno: " . $mysqli->connect_errno . "\n";
+                echo "Error: " . $mysqli->connect_error . "\n";
+                
+                // You might want to show them something nice, but we will simply exit
+                exit;
+            }
 
-        $this->conn = mysql_connect("$host:$port", $user, $password) or die('Database connection error');
-
-        mysql_select_db($dbname) or die('Database selection error');
+        $this->conn = $mysqli;
 
         $this->setChar($charset);
 
@@ -81,17 +99,31 @@ class Mysql
 
         file_put_contents("log.txt", $str, FILE_APPEND);
 
-        $result = mysql_query($this->sql, $this->conn);
-
-
-        if (!$result) {
-
-            die($this->errno() . ':' . $this->error() . '<br />Error SQL statement is ' . $this->sql . '<br />');
-
+        if (!$result = $this->conn->query($sql)) {
+            // Oh no! The query failed. 
+            echo "Sorry, the website is experiencing problems.";
+        
+            // Again, do not do this on a public site, but we'll show you how
+            // to get the error information
+            echo "Error: Our query failed to execute and here is why: \n";
+            echo "Query: " . $sql . "\n";
+            echo "Errno: " . $mysqli->errno . "\n";
+            echo "Error: " . $mysqli->error . "\n";
+            exit;
         }
-
-        return $result;
-
+        
+        // Phew, we made it. We know our MySQL connection and query 
+        // succeeded, but do we have a result?
+        if(isset($result->num_rows)){
+            if ($result->num_rows === 0) {
+                // Oh, no rows! Sometimes that's expected and okay, sometimes
+                // it is not. You decide. In this case, maybe actor_id was too
+                // large? 
+                echo "We could not find a match for ID $aid, sorry about that. Please try again.";
+                exit;
+            }
+            return $result;
+        }
     }
 
     /**
@@ -158,7 +190,7 @@ class Mysql
 
         $list = array();
 
-        while ($row = mysql_fetch_assoc($result)) {
+        while ($row = $result->fetch_assoc()) {
 
             $list[] = $row;
 

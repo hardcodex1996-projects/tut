@@ -15,7 +15,6 @@ class BaseController
 
     protected $loader;
 
-
     public function __construct()
     {
 

@@ -1,0 +1,307 @@
+{
+  "data": [
+    {
+      "plan_id": "56",
+      "name": "AI Forecast Futures\/ETFs Yearly",
+      "plan_nickname": "Futures",
+      "grain": "year",
+      "price": 4589.99,
+      "stripe_plan_id": "plan_FzNj1R7fJ3Bz7G",
+      "product_type": "forecast",
+      "is_recurring": true,
+      "symbols": [
+        "VXXB",
+        "EFA",
+        "XLF",
+        "GDX",
+        "FXI",
+        "EWZ",
+        "USO",
+        "QQQ",
+        "SPY",
+        "EEM",
+        "IWM",
+        "HYG",
+        "SQQQ"
+      ],
+      "market_types": [
+        {
+          "market_type_id": "240",
+          "display_name": "ETFs",
+          "market_type_name": "ETF"
+        }
+      ]
+    },
+    {
+      "plan_id": "57",
+      "name": "AI Forecast Cryptocurrency\/FX Yearly",
+      "plan_nickname": "Crypto\/FX",
+      "grain": "year",
+      "price": 4589.99,
+      "stripe_plan_id": "plan_FzNiETSr8qxxny",
+      "product_type": "forecast",
+      "is_recurring": true,
+      "symbols": [
+        "BTCUSD",
+        "XRPUSD",
+        "LTCUSD",
+        "ETHUSD",
+        "XRPUSDT",
+        "LTCUSDT",
+        "ETHUSDT",
+        "BTCUSDT",
+        "BCCUSDT",
+        "Everything in FX Plan"
+      ],
+      "market_types": [
+        {
+          "market_type_id": "244",
+          "display_name": "Crypto",
+          "market_type_name": "Cryptocurrency"
+        },
+        {
+          "market_type_id": "241",
+          "display_name": "FX",
+          "market_type_name": "FX"
+        }
+      ]
+    },
+    {
+      "plan_id": "58",
+      "name": "AI Forecast Cryptocurrency\/FX Monthly",
+      "plan_nickname": "Crypto\/FX",
+      "grain": "month",
+      "price": 449.99,
+      "stripe_plan_id": "plan_FzNhPjLH2vTMm1",
+      "product_type": "forecast",
+      "is_recurring": true,
+      "symbols": [
+        "BTCUSD",
+        "XRPUSD",
+        "LTCUSD",
+        "ETHUSD",
+        "XRPUSDT",
+        "LTCUSDT",
+        "ETHUSDT",
+        "BTCUSDT",
+        "BCCUSDT",
+        "Everything in FX Plan"
+      ],
+      "market_types": [
+        {
+          "market_type_id": "244",
+          "display_name": "Crypto",
+          "market_type_name": "Cryptocurrency"
+        },
+        {
+          "market_type_id": "241",
+          "display_name": "FX",
+          "market_type_name": "FX"
+        }
+      ]
+    },
+    {
+      "plan_id": "59",
+      "name": "AI Forecast Futures\/ETFs Monthly",
+      "plan_nickname": "Futures",
+      "grain": "month",
+      "price": 449.99,
+      "stripe_plan_id": "plan_FzNgeUDdrMrjOa",
+      "product_type": "forecast",
+      "is_recurring": true,
+      "symbols": [
+        "VXXB",
+        "EFA",
+        "XLF",
+        "GDX",
+        "FXI",
+        "EWZ",
+        "USO",
+        "QQQ",
+        "SPY",
+        "EEM",
+        "IWM",
+        "HYG",
+        "SQQQ"
+      ],
+      "market_types": [
+        {
+          "market_type_id": "240",
+          "display_name": "ETFs",
+          "market_type_name": "ETF"
+        }
+      ]
+    },
+    {
+      "plan_id": "60",
+      "name": "AI Forecast ETF Yearly",
+      "plan_nickname": "ETFs",
+      "grain": "year",
+      "price": 2539.99,
+      "stripe_plan_id": "plan_Fx8DikzRLsCRMt",
+      "product_type": "forecast",
+      "is_recurring": true,
+      "symbols": [
+        "VXXB",
+        "EFA",
+        "XLF",
+        "GDX",
+        "FXI",
+        "EWZ",
+        "USO",
+        "QQQ",
+        "SPY",
+        "EEM",
+        "IWM",
+        "HYG",
+        "SQQQ"
+      ],
+      "market_types": [
+        {
+          "market_type_id": "240",
+          "display_name": "ETFs",
+          "market_type_name": "ETF"
+        }
+      ]
+    },
+    {
+      "plan_id": "61",
+      "name": "AI Forecast ETF Monthly",
+      "plan_nickname": "ETFs",
+      "grain": "month",
+      "price": 249.99,
+      "stripe_plan_id": "plan_Fx8B6r0fuJe48m",
+      "product_type": "forecast",
+      "is_recurring": true,
+      "symbols": [
+        "VXXB",
+        "EFA",
+        "XLF",
+        "GDX",
+        "FXI",
+        "EWZ",
+        "USO",
+        "QQQ",
+        "SPY",
+        "EEM",
+        "IWM",
+        "HYG",
+        "SQQQ"
+      ],
+      "market_types": [
+        {
+          "market_type_id": "240",
+          "display_name": "ETFs",
+          "market_type_name": "ETF"
+        }
+      ]
+    },
+    {
+      "plan_id": "62",
+      "name": "AI Forecast FX Yearly",
+      "plan_nickname": "FX",
+      "grain": "year",
+      "price": 2549.99,
+      "stripe_plan_id": "plan_Fx8AlM1pPWUoI2",
+      "product_type": "forecast",
+      "is_recurring": true,
+      "symbols": [
+        "USDJPY",
+        "GBPUSD",
+        "USDCAD",
+        "USDCHF",
+        "AUDUSD",
+        "EURUSD"
+      ],
+      "market_types": [
+        {
+          "market_type_id": "241",
+          "display_name": "FX",
+          "market_type_name": "FX"
+        }
+      ]
+    },
+    {
+      "plan_id": "63",
+      "name": "AI Forecast Cryptocurrency Yearly",
+      "plan_nickname": "Crypto",
+      "grain": "year",
+      "price": 2549.99,
+      "stripe_plan_id": "plan_Fx89wiHml0TbOU",
+      "product_type": "forecast",
+      "is_recurring": true,
+      "symbols": [
+        "BTCUSD",
+        "XRPUSD",
+        "LTCUSD",
+        "ETHUSD",
+        "XRPUSDT",
+        "LTCUSDT",
+        "ETHUSDT",
+        "BTCUSDT",
+        "BCCUSDT"
+      ],
+      "market_types": [
+        {
+          "market_type_id": "244",
+          "display_name": "Crypto",
+          "market_type_name": "Cryptocurrency"
+        }
+      ]
+    },
+    {
+      "plan_id": "64",
+      "name": "AI Forecast FX Monthly",
+      "plan_nickname": "FX",
+      "grain": "month",
+      "price": 249.99,
+      "stripe_plan_id": "plan_Fx876lMbuQmSlv",
+      "product_type": "forecast",
+      "is_recurring": true,
+      "symbols": [
+        "USDJPY",
+        "GBPUSD",
+        "USDCAD",
+        "USDCHF",
+        "AUDUSD",
+        "EURUSD"
+      ],
+      "market_types": [
+        {
+          "market_type_id": "241",
+          "display_name": "FX",
+          "market_type_name": "FX"
+        }
+      ]
+    },
+    {
+      "plan_id": "65",
+      "name": "AI Forecast Cryptocurrency Monthly",
+      "plan_nickname": "Crypto",
+      "grain": "month",
+      "price": 249.99,
+      "stripe_plan_id": "plan_Fx82GRJ9d5voNe",
+      "product_type": "forecast",
+      "is_recurring": true,
+      "symbols": [
+        "BTCUSD",
+        "XRPUSD",
+        "LTCUSD",
+        "ETHUSD",
+        "XRPUSDT",
+        "LTCUSDT",
+        "ETHUSDT",
+        "BTCUSDT",
+        "BCCUSDT"
+      ],
+      "market_types": [
+        {
+          "market_type_id": "244",
+          "display_name": "Crypto",
+          "market_type_name": "Cryptocurrency"
+        }
+      ]
+    }
+  ],
+  "count": 10
+}
